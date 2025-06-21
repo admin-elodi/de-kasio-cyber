@@ -1,11 +1,13 @@
 // src/pages/Home.jsx
-import HeroSection from '../components/common/HeroSection';
+import Hero from '../components/common/Hero';
+
 
 
 const Home = () => {
   return (
     <div>
-      <HeroSection />
+      
+      <Hero />
       
    
     </div>
