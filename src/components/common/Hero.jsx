@@ -1,4 +1,3 @@
-// src/components/common/Hero.jsx
 import React, { useState, useEffect } from 'react';
 import nysc from '@/assets/images/nysc.jpg';
 import company from '@/assets/images/company.jpg';
@@ -23,24 +22,40 @@ const Hero = () => {
   const togglePlayPause = () => setIsPlaying(!isPlaying);
 
   return (
-    <div className="relative w-[90vw] h-screen left-1/2 -translate-x-1/2 overflow-hidden border-8 border-black">
+    <div className="relative w-full h-screen overflow-hidden border-8 border-black">
       {/* Header overlay */}
       <div className="absolute top-0 left-0 w-full h-[15vh] bg-black flex items-center justify-between px-5 box-border z-20">
+        {/* Globe Logo */}
         <img
           src={logo}
           alt="De-Kasio Logo"
-          className="h-4/5 object-contain ml-auto" // Added ml-auto for left margin from parent
+          className="h-10 md:h-[80%] object-contain" // smaller on mobile, original on desktop
         />
 
+        {/* Center Text */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[21] flex flex-col items-center">
-          <div className="bg-[#f0f0f0] w-[300px] text-center px-10 py-8 rounded-md font-bold text-[clamp(1rem,2vw,1.5rem)] uppercase shadow-md border border-black">
+          <div className="bg-[#f0f0f0] 
+                          w-[180px] md:w-[300px]  /* reduced width on mobile */
+                          text-center px-4 md:px-10 py-4 md:py-8 
+                          rounded-md font-bold 
+                          text-[clamp(0.875rem,4vw,1.5rem)] /* smaller text on mobile */
+                          uppercase shadow-md border border-black">
             De-Kasio Cyber
           </div>
-          <div className="text-white text-lg text-center mt-2">Ongoing & Upcoming Registrations!</div>
+          <div className="text-white text-sm md:text-lg text-center mt-1 md:mt-2">
+            Ongoing &amp; Upcoming Registrations!
+          </div>
         </div>
 
-        <div className="cursor-pointer mr-auto"> {/* Added mr-auto for right margin from parent */}
-          <svg width="30" height="30" viewBox="0 0 100 80" fill="white">
+        {/* Hamburger Menu */}
+        <div className="cursor-pointer">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 100 80"
+            fill="white"
+            className="md:w-[30px] md:h-[30px]"
+          >
             <rect width="100" height="15"></rect>
             <rect y="30" width="100" height="15"></rect>
             <rect y="60" width="100" height="15"></rect>
@@ -54,9 +69,19 @@ const Hero = () => {
           key={index}
           src={image}
           alt={`Announcement ${index + 1}`}
-          className={`absolute top-0 w-full h-full object-cover transition-all duration-500 ease-in-out ${
-            index === currentIndex ? 'left-0' : 'left-full'
-          }`}
+          className={`absolute top-0 w-full 
+                      object-cover transition-all duration-500 ease-in-out 
+                      ${index === currentIndex ? 'left-0' : 'left-full'}
+                      h-[50vh] md:h-full 
+                      md:object-cover 
+                      object-center 
+                      md:object-center 
+                      md:scale-100 
+                      scale-110`} // magnify on mobile with scale-110
+          style={{
+            transition: 'all 0.5s ease-in-out',
+            objectPosition: 'center',
+          }}
         />
       ))}
 
