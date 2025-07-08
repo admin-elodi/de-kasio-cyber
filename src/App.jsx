@@ -1,20 +1,17 @@
-// src/App.jsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import MainLayout from './components/layout/MainLayout';
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import WhyChooseUs from "./components/WhyChooseUs";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 
-
-const App = () => {
+export default function App() {
   return (
-    <Router>
-      <MainLayout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-    
-        </Routes>
-      </MainLayout>
-    </Router>
+    <div className="font-sans bg-white text-primary">
+      <Hero />
+      <Services />
+      <WhyChooseUs />
+      <Testimonials />
+      <Contact />
+    </div>
   );
-};
-
-export default App;
+}
