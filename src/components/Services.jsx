@@ -25,7 +25,6 @@ const services = [
   {
     label: "Learn coding (HTML, CSS, Javascript)",
     active: true,
-    theme: "blue",
     onClickType: "ict",
   },
 ];
@@ -46,19 +45,20 @@ export default function Services() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {services.map((service, idx) => {
           const isActive = service.active;
-          const theme = service.theme || "yellow";
           const baseStyles =
             "w-full p-4 rounded-xl shadow-sm font-semibold transition";
 
-          const bgStyle = isActive
-            ? `bg-${theme}-100 text-${theme}-800 hover:shadow-md cursor-pointer`
-            : "bg-yellow-100 text-gray-700 cursor-default";
+          // ✅ Use static classes only
+          const activeStyle = "bg-blue-100 text-blue-800 hover:shadow-md cursor-pointer";
+          const inactiveStyle = "bg-yellow-100 text-gray-700 cursor-default";
+
+          const finalStyle = isActive ? activeStyle : inactiveStyle;
 
           return (
             <button
               key={idx}
               onClick={isActive ? () => handleServiceClick(service) : undefined}
-              className={`${baseStyles} ${bgStyle}`}
+              className={`${baseStyles} ${finalStyle}`}
               disabled={!isActive}
             >
               {service.label}
