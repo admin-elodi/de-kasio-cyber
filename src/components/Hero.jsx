@@ -6,8 +6,8 @@ export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-br from-white to-gray-100 relative">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4">De-Kasio Cybercafe</h1>
+    <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gray-400 relative">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4">Visarc Business Center</h1>
       <p className="text-lg md:text-xl mb-8 text-gray-600">
         Your Digital Gateway to JAMB, WAEC, NYSC, CAC & More
       </p>

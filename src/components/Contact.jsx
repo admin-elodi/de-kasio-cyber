@@ -3,7 +3,7 @@ export default function Contact() {
   return (
     <section className="py-16 bg-gray-100 px-4 text-center">
       <h2 className="text-3xl font-semibold mb-6">Contact Us</h2>
-      <p className="mb-4">📍 123 Main Street, Enugu, Nigeria</p>
+      <p className="mb-4">📍 Nkwo Market Road, Ibagwa-Nike, Enugu</p>
       <p className="mb-4">📞 +234 810 000 0000</p>
       <a
         href="https://wa.me/2348100000000"

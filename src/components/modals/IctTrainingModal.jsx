@@ -47,8 +47,9 @@ export default function IctTrainingModal({ closeModal }) {
           <div className="text-gray-700 space-y-3 mb-6 text-center">
             <p><strong>Course content:</strong> HTML, CSS, Javascript (Beginner-friendly)</p>
             <p><strong>Schedule:</strong> 3 Months (Thrice weekly, 2hrs per session)</p>
-            <p><strong>Location:</strong> De-Kasio Cyber, Enugu</p>
+            <p><strong>Location:</strong> Visarc Business Center, Enugu</p>
             <p><strong>Fee:</strong> ₦105,000</p>
+            <p><strong>Instalmental plan:</strong> Fees payable in 3 installments</p>
             <p>Call Ikenna for immediate enquiries on 0813 657 3235</p>
           </div>
 

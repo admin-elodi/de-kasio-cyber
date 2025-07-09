@@ -27,12 +27,12 @@ export default function RegistrationModal({ closeModal }) {
           </div>
 
           {/* Payment Info */}
-          <div className="text-gray-700 space-y-3 mb-6">
+          <div className="text-gray-700 space-y-3 mb-2">
             <div>
               <span className="font-semibold">Amount:</span> ₦2,000
             </div>
             <div>
-              <span className="font-semibold">Account Name:</span> De-Kasio Cyber
+              <span className="font-semibold">Account Name:</span> Visarc Business Center
             </div>
             <div>
               <span className="font-semibold">Bank:</span> Access Bank
